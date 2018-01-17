@@ -1,6 +1,5 @@
 # laracmsnew
 
-
 Laravel 5.5 demo Content Management System
 
 using:
