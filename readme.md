@@ -1,5 +1,6 @@
 # laracmsnew
 
+
 Laravel 5.5 demo Content Management System
 
 using:
@@ -11,9 +12,11 @@ Menu Management:
 Backend - Menu CRUD, many submenus
 Frontend - Sidebar menu - treeview
 
+
 Page Management:
 Backend - Page CRUD, using Summernote WYSIWYG
 Frontend - view pages
+
 
 TODO
 many other features to come
