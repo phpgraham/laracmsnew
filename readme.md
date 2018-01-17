@@ -11,9 +11,20 @@ Created:
 * Backend - Menu CRUD, many submenus
 * Frontend - Sidebar menu - treeview
 
+<<<<<<< HEAD
 # Page Management:
 * Backend - Page CRUD, using Summernote WYSIWYG
 * Frontend - view pages
 
 # TODO
 * many other features to come
+=======
+
+Page Management:
+Backend - Page CRUD, using Summernote WYSIWYG
+Frontend - view pages
+
+
+TODO
+many other features to come
+>>>>>>> origin/master
