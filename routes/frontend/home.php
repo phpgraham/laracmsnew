@@ -9,6 +9,9 @@ Route::get('contact', 'ContactController@index')->name('contact');
 Route::post('contact/send', 'ContactController@send')->name('contact.send');
 Route::get('/pages', 'PagesController@index')->name('pages.index');
 Route::get('/pages/{page}', 'PagesController@show')->name('pages.show');
+Route::get('/maps', 'MapsController@index')->name('maps.index');
+Route::get('/maps/{map}', 'MapsController@show')->name('maps.show');
+
 
 /*
  * These frontend controllers require the user to be logged in

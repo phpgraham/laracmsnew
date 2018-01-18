@@ -77,7 +77,9 @@ return [
         'client_id'     => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
         'redirect'      => env('GOOGLE_REDIRECT'),
-
+        'maps' => [
+            'api-key' => env('GOOGLE_MAPS_API_KEY'),
+        ],
         /*
          * Only allows google to grab email address
          * Default scopes array also has: 'https://www.googleapis.com/auth/plus.login'
