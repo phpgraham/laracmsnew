@@ -11,13 +11,17 @@ class Menus extends Model
 
   public function parent() {
 
-    return $this->hasOne('App\Menus', 'id', 'parent_id')->orderBy('menu_order');
+    //return $this->hasOne('App\Menus', 'id', 'parent_id')->orderBy('menu_order');
+
+    return $this->hasOne(static::class, 'parent_id');
 
   }
 
   public function children() {
 
-    return $this->hasMany('App\Menus', 'parent_id', 'id')->orderBy('menu_order');
+    //return $this->hasMany('App\Menus', 'parent_id', 'id')->orderBy('menu_order');
+
+    return $this->hasMany(static::class, 'parent_id');
 
   }
 

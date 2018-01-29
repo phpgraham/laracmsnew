@@ -1,24 +1,30 @@
 <?php
 
-namespace App\Http\Controllers\Frontend\Menu;
+namespace App\Http\Controllers\Frontend;
 
-
+use App\Repositories\MenuRepository;
+use App\Repositories\Interfaces\MenuRepositoryInterface;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Menus;
+
 
 /**
  * Class DashboardController.
  */
 class MenuController extends Controller
 {
-    /**
-     * @return \Illuminate\View\View
-     */
-    public function index()
-    {
-        $menus = Menus::where('parent_id', 0)->orderBy('order')->get();
-        return view('frontend.includes.sidebar', compact('menus'));
-    }
+  private $menuRepo;
+
+  public function __construct(MenuRepositoryInterface $menuRepository)
+  {
+    $this->menuRepo = $menuRepository;
+  }
+  /**
+   * @return \Illuminate\View\View
+   */
+  public function index()
+  {
+    $menus = $this->menuRepo->listMenu(0);
+    return view('frontend.includes.sidebar', compact('menus'));
+  }
 
 }
